@@ -1,6 +1,6 @@
 #Raimon Bach Pareja
 #30/11/21
-#Some basic college coding -
+#Some basic college coding - NDVI, Advanced list manipulations & plotting
 
 
 
