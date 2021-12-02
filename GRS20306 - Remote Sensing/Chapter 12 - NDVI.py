@@ -3,7 +3,9 @@
 #Some basic college coding - NDVI, Advanced list manipulations & plotting
 
 
-
+########################
+#Imports & Inits
+########################
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,7 +13,9 @@ from scipy import stats
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 
+########################
 # GET EXCEL FILE
+########################
 location = "C:\\Data\\Remote_Sensing\\CourseData\\Remotesensing(1)\\Achterhoek_FieldSpec_2008.xlsx"
 matrix = pd.read_excel(location)
 first = pd.ExcelFile("C:\\Data\\Remote_Sensing\\CourseData\\Remotesensing(1)\\Achterhoek_FieldSpec_2008.xlsx")
@@ -21,7 +25,9 @@ second = pd.read_excel(first, 'Field_sampling')
 # matrix.plot(x='Unnamed: 0')
 # matrix[['Unnamed: 0', 'plot', 'Unnamed: 2', 'Unnamed: 3']].plot(x='Unnamed: 0')
 
+########################
 # CREATE DATA FRAMES
+########################
 fresh_weight = pd.DataFrame(data=second.iloc[0, 1:])
 N_concentration = pd.DataFrame(data=second.iloc[2, 1:])
 N_content = pd.DataFrame(data=second.iloc[3, 1:])
@@ -33,7 +39,9 @@ wavelengths = pd.DataFrame(data=matrix.iloc[:, 0][1:])
 plot = pd.DataFrame(data=matrix.iloc[:, 1][1:])
 plot2 = pd.DataFrame(data=matrix.iloc[:, 2][1:])
 
+########################
 # CREATE ARRAYS
+########################
 list1 = ndvi.values.tolist()
 flat_list1 = [j for i in list1 for j in i]
 y = np.array(flat_list1[1:])
@@ -66,7 +74,9 @@ list8 = plot2.values.tolist()
 flat_list8 = [j for i in list8 for j in i]
 y5 = np.array(flat_list8)
 
+########################
 # DESIGN PLOTS
+########################
 plt.plot(x, y, 'o')
 plt.xlabel('Fresh weight (ton/ha)')
 plt.ylabel('NDVI')
