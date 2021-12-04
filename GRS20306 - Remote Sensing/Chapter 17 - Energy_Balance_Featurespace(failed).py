@@ -1,8 +1,7 @@
 #Colm Keyes
 #30/11/21
 #Some basic college coding - beginning geoprocessing in Python (FAILED, matplotlib has difficulty dealing with plotting
-# the featurespace, not possible to plot so many points, but now i realise that these points should just have been
-# aggregated (maybe by nearest neighbour?) from multiple points to a point scalar counting the number of points at a pixel.
+# the featurespace
 
 ########################
 #Imports & Inits
